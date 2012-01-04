@@ -1,1 +1,41 @@
 path to httpd.conf file: /etc/httpd/conf/httpd.conf
+----
+2012-01-04 11:34
+Catalog name? standard
+Find httpd.conf files? y
+Enter path to httpd.conf file: /etc/httpd/conf/httpd.conf
+Default server? traveller
+Do you have a CGI directory? y
+CgiDir? /srv/http/cgi-bin
+CgiBase? /cgi-bin
+DocumentRoot? /srv/http
+ShareDir? /srv/http
+ShareUrl? 
+VendRoot? /home/troy/interchange
+BaseDir? /home/troy/catalogs
+######### BEGINNING CATALOG CONFIGURATION #########
+Server name? traveller
+DemoType? standard
+MailOrderTo? troy
+CatRoot? /home/troy/catalogs/standard
+CgiDir? /srv/http/cgi-bin
+CgiUrl? /cgi-bin/standard
+Aliases?
+DocumentRoot? /srv/http
+SampleHtml? /srv/http/standard
+ImageDir? /srv/http/standard/images
+ImageUrl? /standard/images
+INET or UNIX mode? UNIX
+Do you use CGIWRAP or SUEXEC? n
+Your company name: ...............................Standard Store
+Set to 1 if you want to use MySQL: ...............1
+-----------------------------------------------------------------
+Done with installation. If my reading of your input is correct, you
+should be able to access the demo catalog with the following URL:
+
+        http://traveller/standard
+
+In any case, you should get direct access at:
+
+        http://traveller/cgi-bin/standard
+
