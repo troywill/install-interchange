@@ -1,1 +1,0 @@
-pacman --sync apache
