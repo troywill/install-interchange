@@ -1,12 +1,15 @@
 #!/bin/sh
-pacman --sync perl-digest-md5
+# pacman --sync perl-digest-md5
 pacman --sync perl-digest-sha1
-pacman --sync perl-mime-base64
+# pacman --sync perl-mime-base64
 pacman --sync perl-mime-lite
-pacman --sync perl-uri-url
+# pacman --sync perl-uri-url ( not found )
 pacman --sync perl-html-tagset
 pacman --sync perl-html-entities
 pacman --sync perl-bundle-lwp
+
+pacman --sync perl-libwww
+
 pacman --sync perl-parse-recdescent
 pacman --sync perl-ole-storage_lite
 pacman --sync perl-bundle-lwp
