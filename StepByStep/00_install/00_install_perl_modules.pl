@@ -1,4 +1,11 @@
+#!/usr/bin/env perl
+use warnings;
+use strict;
+
+
 #!/bin/sh
+
+
 # pacman --sync perl-digest-md5
 pacman --sync perl-digest-sha1
 # pacman --sync perl-mime-base64
@@ -26,3 +33,10 @@ pacman --sync perl-storable
 pacman --sync perl-spreadsheet-parseexcel
 pacman --sync perl-spreadsheet-writeexcel
 pacman --sync perl-net-ip-match-regexp
+
+
+    perl-libwww: git svn
+    perl-term-readkey: git svn
+    perl-mime-tools: git send-email
+    perl-net-smtp-ssl: git send-email TLS support
+    perl-authen-sasl: git send-email TLS support
