@@ -6,15 +6,87 @@ use DBI;
 my $dbh = DBI->connect('DBI:mysql:interchange', 'troy', 'pass')
     or die "Couldn't connect to database: " . DBI->errstr;
 
-my $sth_products = $dbh->prepare('SELECT * FROM products ORDER BY sku')
-    or die "Couldn't prepare statement: " . $dbh->errstr;
+&display_by_sku();
+&display_by_prod_group();
 
-$sth_products->execute();
+sub display_by_sku {
+    my $sth_products = $dbh->prepare('SELECT * FROM products ORDER BY sku')
+	or die "Couldn't prepare statement: " . $dbh->errstr;
 
-while (my @data = $sth_products->fetchrow_array()) {
-    my $sku = $data[0];
-    my $description = $data[1];
-    print "$sku => $description\n";
+    $sth_products->execute();
+
+    while (my @data = $sth_products->fetchrow_array()) {
+	my $sku = $data[0];
+	my $description = $data[1];
+	my $title = $data[2];
+	my $template_page = $data[3];
+	my $comment = $data[4];
+	my $thumb = $data[5];
+	my $image = $data[6];
+	my $price = $data[7];
+	my $wholesale = $data[8];
+	my $prod_group = $data[9];
+	my $category = $data[10];
+	my $tax_category = $data[11];
+	my $nontaxable = $data[12];
+	my $weight = $data[13];
+	my $option_type = $data[14];
+	my $author = $data[15];
+	my $related = $data[16];
+	my $featured = $data[17];
+	my $gift_cert = $data[18];
+	my $download = $data[19];
+	my $dl_type = $data[20];
+	my $dl_location = $data[21];
+	my $inactive = $data[22];
+	my $url = $data[23];
+	my $sale_price = $data[24];
+	my $image_large = $data[25];
+	
+	print "$sku: $description [ $prod_group -> $category ]\n";
+    }
+
+    
+}
+
+sub display_by_prod_group {
+    my $sth_group = $dbh->prepare('SELECT * FROM products ORDER BY prod_group, category, sku')
+	or die "Couldn't prepare statement: " . $dbh->errstr;
+
+    $sth_group->execute();
+
+    while (my @data = $sth_group->fetchrow_array()) {
+	my $sku = $data[0];
+	my $description = $data[1];
+	my $title = $data[2];
+	my $template_page = $data[3];
+	my $comment = $data[4];
+	my $thumb = $data[5];
+	my $image = $data[6];
+	my $price = $data[7];
+	my $wholesale = $data[8];
+	my $prod_group = $data[9];
+	my $category = $data[10];
+	my $tax_category = $data[11];
+	my $nontaxable = $data[12];
+	my $weight = $data[13];
+	my $option_type = $data[14];
+	my $author = $data[15];
+	my $related = $data[16];
+	my $featured = $data[17];
+	my $gift_cert = $data[18];
+	my $download = $data[19];
+	my $dl_type = $data[20];
+	my $dl_location = $data[21];
+	my $inactive = $data[22];
+	my $url = $data[23];
+	my $sale_price = $data[24];
+	my $image_large = $data[25];
+	
+	print "$prod_group -> $category, $sku: $description \n";
+    }
+
+    
 }
 
 __END__
