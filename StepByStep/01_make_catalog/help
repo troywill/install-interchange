@@ -1,0 +1,52 @@
+#!/bin/sh
+exit
+usage: ./makecat [options] [catalogname]
+
+options:
+
+    -F    Force make of catalog with defaults
+    -c    Configuration file (default is etc/makecat.cfg)
+    -l    File to log to (default makecat.log)
+    -r    Reconfigure defaults
+
+    [catalogname] must contain alphanumerics and hyphens only.
+
+    Defaults:
+    --basedir=directory        Base directory for catalogs
+    --cgibase=url_fragment     Base URL for link programs
+    --documentroot=directory   The directory where HTML is based
+    --interchangegroup=group   The default group files should be owned by
+    --interchangeuser=username The user ID which runs Interchange
+    --serverconf=filename      Location of httpd.conf
+    --vendroot=filename        Location of Interchange software
+    --homedir=directory        Use instead of $HOME to set defaults
+
+    Required:
+    --catroot=directory        Directory where Interchange catalog files go
+    --cgidir=directory         The directory the CGI link should go to
+    --servername=server        Name of server (www.whatever.domain)
+    --cgiurl=url_fragment      The path to the CGI link (no server name)
+    --demotype=template        The template catalog (standard is the default)
+    --mailorderto=email        Email address to send orders
+
+    Optional:
+    --catalogconf=file         Specify separate configuration file for catalogs
+    --catuser=username         The user files should be owned by (if root)
+    --sharedir=directory       The directory where shared admin images go
+    --shareurl=url             The URL to prefix shared admin images with
+    --imagedir=directory       The directory where template images go
+    --imageurl=url             The URL to prefix images with
+    --linkmode=mode            UNIX or INET (link program vlink or tlink)
+    --linkprogram=file         Use file as link program instead of vlink/tlink
+    --nocfg                    Don't add to interchange.cfg
+    --nocopy                   Don't actually copy the files, just test
+    --norunning                Don't add to running server
+    --noumask                  Don't set umask
+    --permtype=[M|G|U]         Set permission type (Multi, Group, User)
+    --reference                Return hash of config as string
+                               (sets -F, no write)
+    --relocate=dir             Directory to relocate files to (for RPM and such)
+    --samplehtml=directory     The directory where template HTML goes
+    --sampleurl=url            URL to access HTML for catalog
+
+
