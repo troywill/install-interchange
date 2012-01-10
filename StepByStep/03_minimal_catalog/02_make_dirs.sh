@@ -1,0 +1,1 @@
+mkdir session etc tmp
