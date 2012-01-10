@@ -9,8 +9,7 @@ my $dbh = DBI->connect('DBI:mysql:interchange', 'troy', 'pass')
 &delete_excess_tree();
 
 sub delete_excess_tree {
-    my $sth_delete = $dbh->prepare('DELETE FROM tree WHERE code >= 58"
-SELECT * FROM tree ORDER BY code')
+    my $sth_delete = $dbh->prepare('DELETE FROM tree WHERE code >= 58')
 	or die "Couldn't prepare statement: " . $dbh->errstr;
 
     $sth_delete->execute();
