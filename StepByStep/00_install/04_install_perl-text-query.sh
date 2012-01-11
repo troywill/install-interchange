@@ -1,3 +1,6 @@
 #!/bin/sh
-pacman --sync perl-text-query
-# cpanp i Text::Query
+# https://rt.cpan.org/Public/Bug/Display.html?id=47252
+# https://rt.cpan.org/Ticket/Attachment/893884/463419/textquery.diff
+cpanp d Text::Query
+
+
