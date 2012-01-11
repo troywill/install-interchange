@@ -3,8 +3,15 @@ use warnings;
 use strict;
 use DBI;
 
-my $dbh = DBI->connect('DBI:mysql:interchange', 'troy', 'pass')
+# my $dbh = DBI->connect('DBI:mysql:interchange', 'troy', 'pass')
+
+
+my $dbh = DBI->connect("dbi:Pg:dbname=troy", "troy");
     or die "Couldn't connect to database: " . DBI->errstr;
+
+
+
+dbi:Pg:dbname=database,username,password
 
 &display_by_sku();
 &display_by_prod_group();
