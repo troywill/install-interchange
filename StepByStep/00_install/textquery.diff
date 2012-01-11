@@ -1,0 +1,230 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head>
+<title>Login</title>
+
+
+
+<link rel="shortcut icon" href="/NoAuth/images//favicon.png" type="image/png" />
+<link rel="stylesheet" href="/NoAuth/css/rt.cpan.org-web2/main-squished.css" type="text/css" media="all" />
+<link rel="stylesheet" href="/NoAuth/css/print.css" type="text/css" media="print" />
+
+
+
+<script type="text/javascript" src="/NoAuth/js/util.js"></script>
+<script type="text/javascript" src="/NoAuth/js/titlebox-state.js"></script>
+<script type="text/javascript" src="/NoAuth/js/ahah.js"></script>
+<script type="text/javascript" src="/NoAuth/js/prototype/prototype.js"></script>
+<script type="text/javascript" src="/NoAuth/js/scriptaculous/scriptaculous.js?load=effects,controls"></script>
+<script type="text/javascript"><!--
+    doOnLoad(loadTitleBoxStates);
+    doOnLoad(function () { focusElementById('user') });
+
+
+--></script>
+
+
+
+</head>
+  <body id="comp-NoAuth-Login">
+
+<div id="logo">
+<a href="https://rt.cpan.org"><img
+    src="/NoAuth/images/cpan-rt-3.8.jpg"
+    alt="RT for CPAN"
+    width="195" height="60" /></a>
+    <span class="rtname">RT for rt.cpan.org</span>
+</div>
+
+
+<div id="quickbar">
+  <div id="quick-personal">
+    <span class="hide"><a href="#skipnav">Skip Menu</a> | </span>
+    Not logged in.
+| <a href="/Public/RT/CPAN/About.html">About rt.cpan.org</a>
+</div>
+
+
+
+
+
+
+</div>
+
+<div id="body" class="login-body">
+
+
+
+<div id="for-authors">
+<h3>For CPAN authors</h3>
+<p>
+You can use the form below to log in with your PAUSE userid and password.
+</p>
+</div>
+<script type="text/javascript">
+Event.observe(window, 'load', function() {
+    var authors = document.getElementById("for-authors");
+    var login = document.getElementById("login");
+    authors.parentNode.removeChild(authors);
+    login.insertBefore(authors, login.firstChild);
+});
+</script>
+<div class="clearfix">
+<div id="rtcpan-explanation">
+  <div class="wrapper">
+    <p>
+      This site tracks bugs in every distribution released through
+      <a href="http://cpan.org">CPAN</a>.
+    </p>
+
+    <h2>Want to...</h2>
+
+    <h2>... find a distribution and browse its bugs?</h2>
+    <p>
+      This site lets you <a href="/Public/">search
+      for distributions</a> by name or author.  When you've found the
+      distribution you're looking for, you can browse known bugs and
+      report new bugs.
+    </p>
+
+    <h2>... report a bug in a module using web-interface?</h2>
+    <p>
+      Use <a href="https://www.bitcard.org/">Bitcard</a> or OpenID account.
+      Module authors can use PAUSE credentials.
+    </p>
+
+    <h2>... report a bug in a module using email?</h2>
+    <p>
+      To submit a bug report for a given distribution by email, send mail
+      to <strong>bug-&lt;distribution-name&gt;@rt.cpan.org</strong>, where
+      "&lt;distribution-name&gt;" is something like DBIx-SearchBuilder or
+      Class-DBI or Acme-Current-Forever. Use
+      <a href="/Public/">search</a> to find name of
+      a distribution.
+    </p>
+
+    <h2>... report a bug in perl itself?</h2>
+    <p>
+      To report bugs in perl itself, you're best off using the command-line
+      'perlbug' tool or <a href="http://rt.perl.org">rt.perl.org</a>.
+    </p>
+
+    <h2>... manage bugs in your distributions?</h2>
+    <p>
+      To work with bugs, every module author with a
+      <a href="http://pause.perl.org">PAUSE</a> account can log into
+      rt.cpan.org with their PAUSE userid and password. If you can't log in or
+      distributions you maintain aren't listed, please write to
+      rt-cpan-admin@bestpractical.com at your earliest convenience.
+    </p>
+
+    <h2>... know more about this service?</h2>
+    <p>
+      Read <a href="/Public/RT/CPAN/About.html">this document</a>.
+    </p>
+
+    <p>
+    Enjoy,
+    </p>
+
+    <p class="over-and-out">
+      Jesse Vincent <br />
+      <a href="http://bestpractical.com/">Best Practical Solutions</a>, LLC
+    </p>
+  </div>
+</div>
+
+<div id="rtcpan-login">
+
+<div id="login-box">
+<div class="">
+  <div class="titlebox" id="">
+  <div class="titlebox-title">
+    <span class="left">
+      	Login</span>
+    <span class="right">
+	
+	3.8.HEAD
+    </span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_NoAuth_Login.html------TG9naW4_---0">
+
+
+
+
+<form id="login" name="login" method="post" action="/NoAuth/Login.html">
+
+<div class="input-row">
+    <span class="label">Username:</span>
+    <span class="input"><input name="user" value="" id="user" /></span>
+</div>
+
+<div class="input-row">
+    <span class="label">Password:</span>
+    <span class="input"><input type="password" name="pass" autocomplete="off" /></span>
+</div>
+
+<input type="hidden" name="next" value="f990d4a69e2f4f2493af98e6b1c2de7c" />
+
+<div class="button-row">
+    <span class="input"><input type="submit" class="button" value="Login" /></span>
+</div>
+
+<h3>For Guests</h3>
+<h3>Have an <em>OpenID</em>?</h3>
+<p>Log in with it and have a look around.</p>
+<div class="input-row">
+    <span class="label">OpenID:</span>
+    <span class="input"><input name="openid" /></span>
+</div>
+<div class="button-row">
+    <span class="input"><input type="submit" class="button" value="Login with OpenID" /></span>
+</div>
+<h3>Have a <em>Bitcard</em> account?</h3>
+<p>
+<a href="https://www.bitcard.org/login?bc_ir=email%2Cusername&#38;bc_v=4&#38;bc_t=315ecb2e3f9493552fde42fc09ba4e&#38;bc_io=name&#38;bc_r=https%3A%2F%2Frt.cpan.org%2Findex.html">Log in with it</a> now or get a <a href="https://www.bitcard.org/register?bc_ir=email%2Cusername&#38;bc_v=4&#38;bc_t=315ecb2e3f9493552fde42fc09ba4e&#38;bc_io=name&#38;bc_r=https%3A%2F%2Frt.cpan.org%2Findex.html">Bitcard account</a>.
+</p>
+<h3>Don&#39;t have an account but want to browse bugs?</h3>
+<p>
+Use the <a href="https://rt.cpan.org/Public/?nossl=true">public interface</a>.
+Want to report a bug? Send it in via e-mail.
+</p>
+
+</form>
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+</div><!-- #login-box -->
+</div></div>
+</div><!-- #login-body -->
+</div>
+<div id="footer">
+  <p id="time">
+    <span>Time to display: 0.009015</span>
+  </p>
+  <p id="bpscredits">
+    <span>
+&#187;&#124;&#171; RT 3.8.HEAD Copyright 1996-2010 <a href="http://www.bestpractical.com?rt=3.8.HEAD">Best Practical Solutions, LLC</a>.
+</span>
+</p>
+  <p id="legal">
+Distributed under version 2 <a href="http://www.gnu.org/copyleft/gpl.html"> of the GNU GPL.</a><br />
+To inquire about support, training, custom development or licensing, please contact <a href="mailto:sales@bestpractical.com">sales@bestpractical.com</a>.<br />
+  </p>
+
+</div>
+
+  </body>
+</html>
+
+
+
