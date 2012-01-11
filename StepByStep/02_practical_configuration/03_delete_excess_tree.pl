@@ -3,7 +3,7 @@ use warnings;
 use strict;
 use DBI;
 
-my $dbh = DBI->connect('DBI:mysql:interchange', 'troy', 'pass')
+my $dbh = DBI->connect('DBI:Pg:dbname=troy', 'troy')
     or die "Couldn't connect to database: " . DBI->errstr;
 
 &delete_excess_tree();
